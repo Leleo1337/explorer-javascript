@@ -3,7 +3,6 @@
     let e const são locais e só funcionam no escopo onde foi criada
     
     */
-
 let y = 1
 {   
     y = 0
