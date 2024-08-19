@@ -1,5 +1,4 @@
 // arrays
-
 const animals = [
     'lion',
     'dog',
