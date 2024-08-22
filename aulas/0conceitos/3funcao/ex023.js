@@ -20,8 +20,17 @@ function person(name){
         return this.name + ' está andando...'
     }
 }
+
 const leo = new person("leo")
 const denji = new person("denji")
 
 console.log(leo.name)
 console.log(denji.walk())
+
+
+
+// let name = "leo"
+// let user = new person(name)
+
+// console.log(user.name)
+// console.log(user .walk())
