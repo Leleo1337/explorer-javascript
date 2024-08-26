@@ -30,7 +30,7 @@ console.log(denji.walk())
 
 
 // let name = "leo"
-// let user = new person(name)
 
+// let user = new person(name)
 // console.log(user.name)
 // console.log(user .walk())
