@@ -70,9 +70,9 @@
     // console.log(students)
 
 // 9. Sem rodar o codigo responda qual é a resposta do codigo abaixo, e por que ? Após sua resposta rode o codigo e veja se você acertou
-//      console.log(a)
-//      var a = 1
-// undefined
+    //      console.log(a)
+    //      var a = 1
+    // undefined
 
     console.log(a)
     var a = 1
