@@ -28,6 +28,7 @@ while(Number(result) != randomNumber){
 alert(`Parabéns! Você adivinhou o número em ${xAttempt} tentativas`)
 
 
+
 /*  Parte que fiz sozinho ( abaixo )
 
 let randomNumber = (Math.random() * 10).toFixed(0)
