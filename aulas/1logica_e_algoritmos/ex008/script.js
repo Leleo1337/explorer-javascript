@@ -42,4 +42,4 @@ for(let patient of patients){
 //     patientsNames[i] = patients[i].name
 // }
 
-console.log(patientsNames)
+alert(patientsNames)
