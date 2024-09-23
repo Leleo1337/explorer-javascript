@@ -1,6 +1,5 @@
 
-
-
+// unico problema que eu achei no meu ponto de vista, foi o nome das variaveis, achei um pouco confuso 
 
 const screen1 = document.getElementsByClassName('screen1')[0]
 const screen2 = document.getElementsByClassName('screen2')[0]
@@ -12,7 +11,7 @@ let attempts = 1
 function tentar(event){
     event.preventDefault()
 
-    let attemptNumber =document.getElementById('attemptNumber').value
+    let attemptNumber = document.getElementById('attemptNumber').value
     if(isNaN(attemptNumber) || attemptNumber > 10 || attemptNumber < 0 || attemptNumber.length == 0){
         alert('[ERRO] Insira um numero de 0 a 10')
     }else if(attemptNumber == Number(randomNumber)){
@@ -20,6 +19,8 @@ function tentar(event){
             screen2.style.display = "block";
             guessedAttempts.innerHTML = `Acertou em ${attempts} tentativas`
         }else{
+            document.getElementById('attemptNumber').value = ''
+            document.getElementById('attemptNumber').focus()
             attempts++
         }
         console.log(attemptNumber)
@@ -31,4 +32,7 @@ function playAgain(){
     screen2.style.display = "none";
     attempts = 1
     randomNumber = Math.floor(Math.random() * 10) + 1
+
+    document.getElementById('attemptNumber').value = ''
+    document.getElementById('attemptNumber').focus()
 }
