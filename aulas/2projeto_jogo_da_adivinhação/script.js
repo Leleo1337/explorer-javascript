@@ -1,6 +1,4 @@
-
 // unico problema que eu achei no meu ponto de vista, foi o nome das variaveis, achei um pouco confuso 
-
 const screen1 = document.getElementsByClassName('screen1')[0]
 const screen2 = document.getElementsByClassName('screen2')[0]
 
@@ -25,7 +23,6 @@ function tentar(event){
         }
         console.log(attemptNumber)
 }
-
 
 function playAgain(){
     screen1.style.display = "block";
