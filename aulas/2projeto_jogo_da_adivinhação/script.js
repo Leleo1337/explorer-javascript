@@ -1,35 +1,55 @@
-// unico problema que eu achei no meu ponto de vista, foi o nome das variaveis, achei um pouco confuso 
-const screen1 = document.getElementsByClassName('screen1')[0]
-const screen2 = document.getElementsByClassName('screen2')[0]
-
+//variaveis
+const screen1 = document.querySelector('.screen1')
+const screen2 = document.querySelector('.screen2')
+const btnTry = document.querySelector('#btnTry')
+const btnReset = document.querySelector('#btnReset')
+const text = document.querySelector('#text')
+const error = document.querySelector('#error')
 let randomNumber = Math.floor(Math.random() * 10) + 1
-let guessedAttempts = document.getElementById('guess')
 let attempts = 1
 
-function tentar(event){
+// callback
+btnTry.addEventListener('click', handleTry)
+btnReset.addEventListener('click', handlePlayAgain)
+document.addEventListener('keydown', resetOnEnter)
+
+// funções 
+function handleTry(event){
     event.preventDefault()
 
-    let attemptNumber = document.getElementById('attemptNumber').value
-    if(isNaN(attemptNumber) || attemptNumber > 10 || attemptNumber < 0 || attemptNumber.length == 0){
-        alert('[ERRO] Insira um numero de 0 a 10')
-    }else if(attemptNumber == Number(randomNumber)){
+    const input = document.getElementById('input').value
+    if(isNaN(input) || input > 10 || input < 0 || input.length == ''){
+        error.innerHTML = "[ERRO] Insira um numero entre 1 a 10"
+        attempts--
+    }else{
+        error.innerHTML = ''
+    }
+    if(input == Number(randomNumber)){
             screen1.style.display = "none";
             screen2.style.display = "block";
-            guessedAttempts.innerHTML = `Acertou em ${attempts} tentativas`
+            text.innerHTML = `Acertou em ${attempts} tentativas`
         }else{
-            document.getElementById('attemptNumber').value = ''
-            document.getElementById('attemptNumber').focus()
+            resetInputs()
             attempts++
         }
-        console.log(attemptNumber)
+
 }
 
-function playAgain(){
-    screen1.style.display = "block";
-    screen2.style.display = "none";
+function handlePlayAgain(){
+    screen1.style.display = "block"
+    screen2.style.display = "none"
     attempts = 1
     randomNumber = Math.floor(Math.random() * 10) + 1
+    resetInputs()
+}
 
-    document.getElementById('attemptNumber').value = ''
-    document.getElementById('attemptNumber').focus()
+function resetInputs(){
+    document.getElementById('input').value = ''
+    document.getElementById('input').focus()
+}
+
+function resetOnEnter(e){
+    if(e.key == "Enter" && screen2.style.display === 'block'){
+        handlePlayAgain()
+    }
 }

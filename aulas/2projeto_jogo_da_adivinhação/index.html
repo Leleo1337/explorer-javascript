@@ -16,13 +16,14 @@
             <h1>Jogo da adivinhação</h1>
             <p>adivinhe o numero entre 0 e 10</p>    
             <form>
-                <input type="number" min="0" max="10" id="attemptNumber"> 
-                <button onclick="tentar(event)">Tentar</button>
+                <input type="number" min="0" max="10" id="input"> 
+                <button id="btnTry">Tentar</button>
             </form>
+            <div id="error"></div>
         </section>
         <section class="screen2">
-            <h2 id="guess"></h2>
-            <button onclick="playAgain()">jogar novamente</button>
+            <h2 id="text"></h2>
+            <button id="btnReset">jogar novamente</button>
         </section>
     </main>
     <script src="script.js"></script>

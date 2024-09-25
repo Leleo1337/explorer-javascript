@@ -98,6 +98,10 @@ button:focus{
     box-shadow: none;
 }
 
+div{
+    position: absolute;
+}
+
 /*screen 2*/
 
 
