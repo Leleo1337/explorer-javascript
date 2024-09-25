@@ -1,0 +1,145 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+:root{
+    font-size: 62.5%;
+    
+    /*cores */
+    --tt-heading: #0c3440;
+
+    --tt-label: #00453A;
+    --tt-input: #212529;
+    --ot-input: #02799D;
+    --bd-input: rgba(73, 80, 87, 0.3);
+    --tt-placeHolder: rgba(73 , 80, 87, 0.5);
+    --bg-input: #dce2e9;
+
+    --tt-button: white;
+    --bg-button: #02799D;
+    --bg-buttton-hover: #004c63;
+
+    --bg-error: #F03E3E;
+    --tt-error: white;
+}
+
+body{
+    background-color: #040924;
+    font-family: 'Roboto', sans-serif;
+}
+body, input, button{
+    font-size: 1.6rem;
+}
+
+.container{
+    height: 100vh;
+    display: grid;
+    place-content: center;
+}
+.card{
+    max-width: 42.8rem;
+    padding: 4.8rem 6.4rem 6.4rem 4.8rem;
+    background-color: white;
+    margin-inline: auto;
+    box-shadow: .0rem .2rem .4rem rgb(0, 0, 0, 0.1);
+    border-radius: 0.6rem;
+}
+.title{
+    font-size: 3.2rem;
+    line-height: 4rem;
+    color: var(--tt-heading);
+}
+form{
+    width: 30rem;
+}
+form h1{
+    margin-bottom: 3.2rem;
+}
+form label{
+    display: block;
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+    margin-bottom: .8rem;
+    color: var(--tt-label);
+}
+form input{
+    width: 100%;
+    border: 1px solid var(--bd-input);
+    background-color: var(--bg-input);
+    padding: 1.6rem;
+    border-radius: .4rem;
+}    
+.input-wrapper + .input-wrapper{
+    margin-top: 1.6rem;
+}
+form input:focus{
+    outline: 2px solid var(--ot-input);
+}
+form input::placeholder{
+    color: var(--tt-placeHolder);
+}
+
+form button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row-reverse;
+    gap: .8rem;
+
+    color: var(--tt-button);
+    background-color: var(--bg-button);
+
+    width: 100%;
+    padding: 1.6rem;
+    margin-top: 3.2rem;
+    border: none;
+    border-radius: .4rem;
+
+    font-size: 1.6rem;
+    font-weight: bold;
+    line-height: 2rem;
+    
+    cursor: pointer;
+    transition: 0.1s;
+}
+
+form button:hover{
+    background-color: var(--bg-buttton-hover);
+}
+
+/*   pop up    */
+
+.modal-wrapper.open{
+    opacity: 100;
+    visibility: visible;
+}
+.modal-wrapper{
+    position: absolute;
+    inset: 0;
+    
+    display: grid;
+    place-content: center;
+    
+    background-color: rgba(0, 0, 0, 0.7);
+
+    opacity: 0;
+    visibility: hidden;
+}
+
+.modal{
+    position: relative;
+}
+
+.modal button{
+    position: absolute;
+    top:1.6rem;
+    right: 1.6rem;
+    background-color: white;
+    border: none;
+    cursor: pointer;
+    transition: transform .1;
+}
+.modal button:hover{
+    transform: scale(1.1);
+}

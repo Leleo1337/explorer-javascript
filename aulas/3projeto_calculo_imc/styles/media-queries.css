@@ -1,0 +1,9 @@
+@media screen and (max-width: 400px) {
+    form{
+        width: 230px;
+    }
+    .modal{
+        width: 300px;
+        padding: 40px;
+    }
+}
