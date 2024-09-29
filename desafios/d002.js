@@ -21,5 +21,5 @@ const alphabet = (a) =>{
     console.log(shortAlphabet)
 }
 
-alphabet(1)
+alphabet(5)
 

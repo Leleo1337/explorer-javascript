@@ -38,14 +38,12 @@ body, input, button{
     background-color: var(--bg-error);
     color: var(--tt-error);
     transition: 0.3s;
-}
-.error.on{
-    opacity: 100;
-    visibility: 100;
-}
-.error.off{
     opacity: 0;
-    visibility: 0;
+    visibility: hidden;
+}
+.error.open{
+    opacity: 100;
+    visibility: visible;
 }
 
 .container{
@@ -163,6 +161,8 @@ form button:hover{
     transform: scale(1.1);
 }
 .result{
+    font-size: 2.5rem;
+    color: var(--tt-label);
     text-align: center;
     font-weight: bold;
     margin-top: 40px;
