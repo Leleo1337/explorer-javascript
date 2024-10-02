@@ -34,10 +34,12 @@ body, input, button{
 
 .error{
     width: 100%;
+    padding: 3px;
     text-align: center;
     background-color: var(--bg-error);
     color: var(--tt-error);
     transition: 0.3s;
+
     opacity: 0;
     visibility: hidden;
 }
