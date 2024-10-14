@@ -11,7 +11,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;600&display=swap" rel="stylesheet">
 
-    <script type="module" src="js/main.js"></script>
+    <script type="module" src="js/main.js" defer></script>
 </head>
 <body>
     <div id="app">
@@ -23,54 +23,36 @@
                 <button>&plus;</button>
             </div>
         </header>
-        
-        <thead>
-            <tr>
-                <th>User</th>
-                <th>Repositories</th>
-                <th>Followers</th>
-                <th></th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td class="User">
-                    <img src="https://github.com/Leleo1337.png" alt="Imagem de perfil de Leleo1337">
-                    <a href="https://github.com/Leleo1337" target="_blank">
-                        <p>Leleo1337</p>
-                        <span>Leleo1337</span>
-                    </a>
-                </td>
-                <td class="Repositories">
-                    6
-                </td>
-                <td class="Followers">
-                    0
-                </td>
-                <td>
-                    <button>&times;</button>
-                </td>
-            </tr>
-
-            <tr>
-                <td class="User">
-                    <img src="https://github.com/maykbrito.png" alt="Imagem de perfil de maykbrito">
-                    <a href="https://github.com/maykbrito" target="_blank">
-                        <p>Leleo1337</p>
-                        <span>Leleo1337</span>
-                    </a>
-                </td>
-                <td class="Repositories">
-                    132
-                </td>
-                <td class="Followers">
-                    16000
-                </td>
-                <td>
-                    <button>&times;</button>
-                </td>
-            </tr>
-        </tbody>
+        <table>
+            <thead>
+                <tr>
+                    <th>User</th>
+                    <th>Repositories</th>
+                    <th>Followers</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="user">
+                        <img src="https://github.com/maykbrito.png" alt="Imagem de perfil de maykbrito">
+                        <a href="https://github.com/maykbrito" target="_blank">
+                            <p>maykbrito</p>
+                            <span>maykbrito</span>
+                        </a>
+                    </td>
+                    <td class="repositories">
+                        132
+                    </td>
+                    <td class="followers">
+                        16000
+                    </td>
+                    <td>
+                        <button class="remove">&times;</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
     </div>
 </body>
 </html>
